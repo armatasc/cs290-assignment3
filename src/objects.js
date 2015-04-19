@@ -10,7 +10,14 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  var mySnack = new Object();
+  
+  mySnack.type = 'Goldfish';
+  mySnack.brand = 'Pepperidge Farm';
+  mySnack.flavor = 'Cheddar';
+  mySnack.count = 2000;
+  
+  return mySnack; //Modify ONLY this line
   //end your code
 }
 
@@ -38,7 +45,83 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+function MessageLog(user){
+  this.user = user;
+  this.msgS[];
+  this.msgR[];
+  this.directionS[];
+  this.directionR[];
+  this.countS = 0;
+  this.countR = 0;
+  this.lastReceivedD = 0;
+  
+  this.logMessage = function(messageText, direction){
+    // Sent message
+    if(direction == 0){
+      if(this.countS >= 5){
+        this.directionS.pop();
+        this.directionS.unshift(directions);
+        console.log("Direction: " + this.directionS[0]);
+        this.countS++;
+        this.lastReceivedD = 0;
+      }
+      else{
+        this.directionS.unshift(directions);
+        console.log("Direction: " + this.directionS[0]);
+        this.countS++;
+        this.lastReceivedD = 0;
+      }}
+   // Received messages 
+   else if(direction == 1){
+     if(this.countR >= 5){
+        this.directionR.pop();
+        this.directionR.unshift(directions);
+        console.log("Direction: " + this.directionR[0]);
+        this.countR++;
+        this.lastReceivedD = 1;
+      }
+      else{
+        this.directionR.unshift(directions);
+        console.log("Direction: " + this.directionR[0]);
+        this.countR++;
+        this.lastReceivedD = 1;
+      }}
+    // messageText
+    if(typeof messageText == "string"){
+      // Sent messages
+      if(direction == 0 && this.msgS.length == 5){
+        this.msgS.pop();
+        this.msgS.unshift(messageText);
+        console.log("Message: " + this.msgS[0]);
+      }
+      else if(direction == 0){
+        this.msgs.unshift(messageText);
+        console.log("Message: " +  + this.msgs[0]);
+      }
+      // Received messages
+      else if(direction == 1 && this.msgR.length == 5){
+        this.msgR.pop();
+        this.msgR.unshift(messageText);
+        console.log("Message: " + this.msgR[0]);
+      }
+      else if(direction == 1){
+        this.msgR.unshift(messageText);
+        console.log("Message: " +  + this.msgR[0]);
+      }}
+  }
+  
+  this.getSentMessage = function(whichMsg){
+    if(whichMsg > -1 && whichMsg < 5){
+        return this.msgS[whichMsg];
+    }}
+  
+  this.totalSent = function(){
+    return this.countS;
+  }
+  this.totalReceived = function(){
+    return this.countR;
+  }
+}
 //end your code
 
 /**
@@ -47,7 +130,9 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
-
+MessageLog.prototype.lastReceivedMessage = function(){
+    return this.msgR[0];
+}
 //end your code
 
 /**
@@ -57,5 +142,8 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+var myLog = MessageLog(BlackHatGuy);
+myLog.logMessage("foo", 1);
+myLog.logMessage("bar", 1);
+myLog.logMessage("baz", 1);
 //end your code

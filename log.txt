@@ -2,4 +2,7 @@ Start: Sun, 19 April 2015 11:30:00 -0800
 End: Sun, 19 April 2015 15:34:00 -0800
 Tasks: I completed my first attempt at finishing variables.js, objects.js, and functions.js.
 
+Start: Sun, 19 April 2015 15:45:00 -0800
+End: Sun, 19 April 2015 /// -0800
+Tasks: I completed my first attempt at finishing variables.js, objects.js, and functions.js.
 

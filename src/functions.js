@@ -13,7 +13,10 @@
 */
 
 //your code here
-
+function uselessFunction(){
+    var useless = null;
+    return useless;   
+}
 //end your code
 
 var bar = 'not a function';
@@ -30,7 +33,19 @@ var barType = typeof bar;
 */
 
 //your code here
-
+bar = function(doubleArray[]){
+    var i, tempArray[];
+    for(i = 0; i != doubleArray.length; i++){
+        tempArray[i] = doubleArray[i];
+        doubleArray[i] = 2*doubleArray[i];
+    }
+    for(i = 0; i != doubleArray.length; i++){
+        if(doubleArray[i] != 2*tempArray[i]){
+            return false;
+        }
+    }
+    return true;
+}
 //end your code
 
 /**
@@ -66,5 +81,22 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-
+function parseGit(logArray[]){
+    var GitLogInstances[];
+    var hashRe = /\S(\d+)\s/;
+    var dateRe = /\w(,)\s\d\s\w\s\d{4}\s\d{2}(:)\d{2}(:)\d{2}/;
+    var msgRe = /\s(")\w*(")/;
+    var temp, hash, date, msg;
+    
+    for(var i = 0; i < logArray.length; i++){
+        if(hashRe.exec(logArray[i].hash) != null)
+            hash = hashRe.exec(logArray[i].hash);
+        if(dateRe.exec(logArray[i].date) != null)
+            date = new Date(logArray[i].date);
+        if(msgRe.exec(logArray[i].message) != null)
+            msg = msgRe.exec(logArray[i].message);
+        GitLogInstances[i] = new GitLog(hash, date, msg);
+    }
+    return GitLogInstances;
+}
 //end your code

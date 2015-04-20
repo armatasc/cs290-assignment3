@@ -10,16 +10,15 @@ in input `a`
 a: the original a number
 */
 function variableModification(a) {
-  var plus5;
-  var asString;
-  var yourNumberIs;
-  
+    'use strict';
+    var plus5, asString, yourNumberIs;
+
   //your code here
-  plus5 = a + 5;
-  asString = a.toString();
-  yourNumberIs = "Your Number is '" + a + "'.";
+    plus5 = a + 5;
+    asString = a.toString();
+    yourNumberIs = "Your Number is " + a;
   //end your code
-  return [plus5, asString, yourNumberIs, a];
+    return [plus5, asString, yourNumberIs, a];
 }
 
 /*
@@ -32,9 +31,10 @@ false otherwise
 */
 function isString(b) {
   //your code here
-  if(typeof b != "string")
-    return false;
-  else
+    'use strict';
+    if (typeof b !== "string") {
+        return false;
+    }
     return true;
   //end your code
 }
@@ -48,9 +48,13 @@ return true if c is null, false otherwise
 */
 function isNull(c) {
   //your code here
-  if(c != null)
+    'use strict';
+    if (!(c === 'undefined') && c === null) {
+        return true;
+    }
+    if (c === 'undefined') {
+        return false;
+    }
     return false;
-  else
-    return true;
   //end your code
 }

@@ -3,6 +3,5 @@ End: Sun, 19 April 2015 15:34:00 -0800
 Tasks: I completed my first attempt at finishing variables.js, objects.js, and functions.js.
 
 Start: Sun, 19 April 2015 15:45:00 -0800
-End: Sun, 19 April 2015 /// -0800
-Tasks: I completed my first attempt at finishing variables.js, objects.js, and functions.js.
-
+End: Sun, 19 April 2015 21:14:00 -0800
+Tasks: During this period, I was mainly debugging, reading online resources, and working through the errors one-at-a-time. I am satisfied with the product I have currently.
